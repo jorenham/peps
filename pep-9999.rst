@@ -49,11 +49,6 @@ variance
     generic parameters and the generic type. See `PEP 484
     <https://www.python.org/dev/peps/pep-0484/#covariance-and-contravariance>`_.
     
-variadic
-    A variadic type parameter is either co- or contravariant. A variadic
-    type (or variadic class) is a generic type with at least one variadic 
-    type parameter
-    
 
 Rationale
 =========
@@ -66,7 +61,7 @@ In PEP 484 it states:
 More specifically, variance is a property of the *type parameters* of a 
 generic class. 
 
-Currently, variadic type parameters are declared with type varianbles
+Currently, variant type parameters are declared with type varianbles
 that are constructed with ``covariant=True`` or ``contravariant=True``, 
 e.g.:
 ::
@@ -88,7 +83,7 @@ types, where the concept of variance does not apply, e.g.:
 
 
 This example is valid, but using ``T_co`` or ``T_contra`` instead of 
-``T`` here does not make sense, and type checkers do not allow is.
+``T`` here does not make sense, and type checkers do not allow it.
 
 In ``SimpleFunction``, ``T_co`` or ``T_contra`` are used to annotate
 its method as well. This is required because the variance is associated 
@@ -122,7 +117,7 @@ variables within the type parameter list of ``typing.Generic``,
 
 
 The new syntax uses the ``+`` and ``-`` prefix operators to specify
-variadic type parameters in the same place where the generic type is
+variant type parameters in the same place where the generic type is
 declared:
 ::
 
@@ -153,7 +148,7 @@ parameter list of ``typing.Generic``, ``typing.Protocol``, or a generic
 base class. 
 
 The ``+`` and ``-`` prefix operators can be used on ``typing.TypeVar``
-and ``typing.ParamSpec`` instances, that are now already variadic, i.e.
+and ``typing.ParamSpec`` instances, that are now already variant, i.e.
 its ``__covariant__`` and ``__contravariant__`` attributes must be 
 ``False``.
 
