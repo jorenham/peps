@@ -148,9 +148,13 @@ parameter list of ``typing.Generic``, ``typing.Protocol``, or a generic
 base class. 
 
 The ``+`` and ``-`` prefix operators can be used on ``typing.TypeVar``
-and ``typing.ParamSpec`` instances, that are now already variant, i.e.
-its ``__covariant__`` and ``__contravariant__`` attributes must be 
-``False``.
+and ``typing.ParamSpec`` instances, iff 
+
+- it is not already co- or contravariant
+- it has no type constraints 
+- it has no type bound
+
+Thus, ``TypeVar`` must be constructed with one argument only.
 
 When the same type variable is used on multiple generic base classes,
 they must share the same variance, e.g.
