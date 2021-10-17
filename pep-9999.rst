@@ -174,15 +174,10 @@ attribute on the returned wrapper.
 Thus, type variables defined with ``covariant=True`` and 
 ``contravariant=True``, are not equivalent to ``+T`` and ``-T``.
 
-
-``+T`` and ``-T`` are not valid type annotations, and should only be
-used within the generic type parameter list of generic base classes, e.g.:: 
-
-    class Spam(typing.Generic[+KT]): ...
-    class Eggs(typing.Protocol[-KT, +VT]): ...
-    class HamSet(typing.Sequence[+T]): ...
-
-are valid uses.
+When the variance operators are used on type variables that have type 
+constraints, a type bound, or the same type variable is used with different
+variances within the same generic type specification, a ``TypeError`` is
+raised.
 
 All variance rules that apply to user-defined generic types should apply
 in the same way with the new syntax, as they do with the current syntax,
