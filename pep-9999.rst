@@ -170,16 +170,7 @@ Differences with current syntax
 
 The new typevar operators return a transparent wrapper around the 
 original type variable, which can be accessed with the ``__origin__``
-attribute on the returned wrapper. e.g.::
-
-    (+T).__origin__ is T
-    (+T).__covariant__ is True
-    (+T).__contravariant__ is False
-    (+T).__name__ == T.__name__
-    (+T).__constraints__ == T.__constraints__
-    (+T).__bound__ is T.__bound__
-
-
+attribute on the returned wrapper.
 Thus, type variables defined with ``covariant=True`` and 
 ``contravariant=True``, are not equivalent to ``+T`` and ``-T``.
 
