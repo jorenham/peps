@@ -160,12 +160,9 @@ When the same type variable is used on multiple generic base classes,
 they must share the same variance, e.g.
 ::
     
-    from typing import TypeVar, Callable, Container, Iterable, Protocol
+    class Interval(typing.Container[+T], typing.Protocol[+T]): ...
     
-    class LinkedList(Iterable[+T], Container[+T]): ...
-    class EventListener(Callable[[-T], None], Protocol[-T]): ...
-    
-are valid examples.
+is valid usage.
 
 
 Differences with current syntax
