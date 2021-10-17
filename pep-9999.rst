@@ -206,7 +206,7 @@ and vice-versa.
 Rejected Ideas
 ==============
 
-For more detauls about discussions, see links below:
+For more details about discussions, see links below:
 
 - `Discussion in python/typing <https://github.com/python/typing/issues/813>`_
 
