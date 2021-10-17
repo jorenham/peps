@@ -83,7 +83,7 @@ types, where the concept of variance does not apply, e.g.:
 
 
 This example is valid, but using ``T_co`` or ``T_contra`` instead of 
-``T`` here does not make sense, and type checkers do not allow it.
+``T`` here does not make sense.
 
 In ``SimpleFunction``, ``T_co`` or ``T_contra`` are used to annotate
 its method as well. This is required because the variance is associated 
