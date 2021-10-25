@@ -61,7 +61,7 @@ PEP 484 states:
 More specifically, variance is a property of the *type parameters* of a 
 generic class. 
 
-Currently, variant type parameters are declared with type varianbles
+Currently, variant type parameters are declared with type variables
 that are constructed with ``covariant=True`` or ``contravariant=True``, 
 e.g.:
 ::
