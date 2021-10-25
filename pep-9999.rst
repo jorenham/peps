@@ -15,7 +15,7 @@ Abstract
 This PEP proposes a consise syntax for specifying the variance of
 the type parameters of `user-defined generic types
 <https://www.python.org/dev/peps/pep-0484/#user-defined-generic-types>`_.
-This allow declaring a co- or contravariant type parameter with ``+T`` or 
+This allows declaring a co- or contravariant type parameter with ``+T`` or 
 ``-T``, where ``T`` is a type variable.
 
 
