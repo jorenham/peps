@@ -53,7 +53,7 @@ variance
 Rationale
 =========
 
-In PEP 484 it states:
+PEP 484 states:
 
     Covariance or contravariance is not a property of a type variable,
     but a property of a generic class defined using this variable. 
