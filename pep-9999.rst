@@ -41,7 +41,7 @@ type parameter
 generic type
     A generic type, or generic class, is a class with a base class
     ``typing.Generic``, ``typing.Protocol``, or another generic type, 
-    and has at least one type parameter.
+    that has at least one type parameter.
     
 variance
     A type parameter of a generic type can be either covariant, contravariant,
