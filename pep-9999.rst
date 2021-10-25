@@ -85,8 +85,8 @@ types, where the concept of variance does not apply, e.g.:
 This example is valid, but using ``T_co`` or ``T_contra`` instead of 
 ``T`` here does not make sense.
 
-In ``SimpleFunction``, ``T_co`` or ``T_contra`` are used to annotate
-its method as well. This is required because the variance is associated 
+In ``SimpleFunction``, ``T_co`` and ``T_contra`` are used to annotate
+a method. This is required because the variance is associated 
 with the individual type variables. But the method signature is unrelated 
 to the variance of the type parameters of its generic type, 
 ``SimpleFunction`` in this example. 
